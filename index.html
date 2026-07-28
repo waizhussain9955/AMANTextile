@@ -496,6 +496,115 @@
   }
 </style>
 
+
+<style id="global-theme-fix-style">
+  /* 1. Permanent Preloader & Spinner Removal */
+  #preloader, #nt-preloader, div#nt-preloader, .pace {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* 2. Force Header Visibility & Contrast */
+  #header, header#header {
+    background: #010a29 !important;
+    position: relative !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+    padding: 12px 0 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+  }
+  #header .main-menu {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+  #header a, #header .nav-menu > li > a {
+    color: #ffffff !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 8px 12px !important;
+    text-decoration: none !important;
+  }
+  #header .nav-menu > li > a:hover {
+    color: #D4AF37 !important;
+  }
+  #header .nav-menu ul {
+    background: #010a29 !important;
+    border: 1px solid rgba(212,175,55,0.4) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
+    padding: 10px 0 !important;
+  }
+  #header .nav-menu ul li a {
+    color: #ffffff !important;
+    padding: 8px 20px !important;
+    display: block !important;
+    text-transform: none !important;
+  }
+  #header .nav-menu ul li a:hover {
+    background: rgba(212,175,55,0.2) !important;
+    color: #D4AF37 !important;
+  }
+
+  /* 3. Force Section & Text Visibility Across All Pages */
+  .elementor-invisible, .wow {
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: none !important;
+    transform: none !important;
+  }
+  body {
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow-x: hidden !important;
+    background-color: #ffffff !important;
+  }
+
+  /* 4. Contrast Fix for Dark Blue Sections */
+  .dark-bg, [style*="background: #010a29"], [style*="background-color: #010a29"], [style*="background: rgb(1, 10, 41)"], [style*="background-color: rgb(1, 10, 41)"] {
+    color: #ffffff !important;
+  }
+  .dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6,
+  [style*="#010a29"] h1, [style*="#010a29"] h2, [style*="#010a29"] h3, [style*="#010a29"] h4, [style*="#010a29"] h5, [style*="#010a29"] h6,
+  [style*="#010a29"] p, [style*="#010a29"] span, [style*="#010a29"] li, [style*="#010a29"] a {
+    color: #ffffff !important;
+  }
+  [style*="#010a29"] li strong, [style*="#010a29"] a strong {
+    color: #D4AF37 !important;
+  }
+
+  /* 5. Subpage Hero Banners Typography & Height */
+  .subpage-hero-banner {
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 300px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 60px 20px !important;
+  }
+  .subpage-hero-banner h1 {
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+    margin: 0 !important;
+  }
+
+  /* 6. Image Display & Container Alignment */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: inline-block !important;
+  }
+</style>
+
 </head>
 
 <!-- BODY START -->
