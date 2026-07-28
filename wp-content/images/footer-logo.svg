@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" width="280" height="50">
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
+    <linearGradient id="goldGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#112b82" />
       <stop offset="100%" stop-color="#D4AF37" />
     </linearGradient>
   </defs>
   
   <!-- Monogram Mark 'A' -->
   <g transform="translate(5, 5)">
-    <polygon points="20,2 2,38 12,38 16,29 28,29 32,38 42,38" fill="url(#goldGrad)" />
-    <polygon points="22,9 26,21 18,21" fill="#010a29" />
+    <polygon points="20,2 2,38 12,38 16,29 28,29 32,38 42,38" fill="url(#goldGradFooter)" />
+    <polygon points="22,9 26,21 18,21" fill="#FFFFFF" />
     <circle cx="22" cy="18" r="2.5" fill="#D4AF37" />
   </g>
 
-  <!-- Clean Brand Name -->
-  <text x="55" y="28" font-family="'Poppins', 'Inter', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="1.5">AMAN</text>
+  <!-- Clean Brand Name (Dark Navy for White Background) -->
+  <text x="55" y="28" font-family="'Poppins', 'Inter', sans-serif" font-weight="800" font-size="22" fill="#010a29" letter-spacing="1.5">AMAN</text>
   <text x="55" y="42" font-family="'Quicksand', 'Inter', sans-serif" font-weight="600" font-size="10" fill="#D4AF37" letter-spacing="4">TEXTILE</text>
 </svg>
