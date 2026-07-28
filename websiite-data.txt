@@ -1,0 +1,103 @@
+# Website Clone: Naeem Enterprise (naeementerprise.com)
+
+We will build a high-performance, responsive multi-page web application cloning **Naeem Enterprise**—a leading textile and garment manufacturer (established in 1995). The design will incorporate modern aesthetics, sleek dark-navy color tones (`#056EB9`, `#010a29`, `#112b82`), smooth hero sliders, interactive galleries, and full mobile responsiveness.
+
+## User Review Required
+
+> [!IMPORTANT]
+> - **Multi-Page Architecture**: We will build clean, semantic HTML5/CSS3/JS pages matching the structure of the original website (`index.html`, `about-us.html`, `fabric.html`, `basic-apparel.html`, `baby-product.html`, `home-textile.html`, `gallery.html`, `social-responsibility.html`, and `contact-us.html`).
+> - **Design Polish**: We will upgrade the legacy design with modern glassmorphism, responsive navigation drawers, rich typography (Poppins / Quicksand / Inter), interactive image lightboxes, slider controls, and smooth micro-animations.
+
+## Open Questions
+
+> [!NOTE]
+> 1. Do you prefer any custom contact details (phone, email, address) or should we keep the exact official details of Naeem Enterprise from their current website?
+> 2. Would you like a backend API integrated for the contact form, or a client-side submission confirmation modal?
+
+---
+
+## Proposed Changes
+
+### Core Design System & Assets
+
+#### [NEW] [style.css](file:///c:/Users/Waiz-Hussain/Desktop/aman/style.css)
+- CSS custom properties for color tokens (Deep Navy, Royal Blue, Gold Accent, Clean White, Dark Slate).
+- Global reset, typography, header/navigation styles, hero section styles, card grids, button components, modal lightbox, and responsive breakpoints.
+
+#### [NEW] [script.js](file:///c:/Users/Waiz-Hussain/Desktop/aman/script.js)
+- Responsive mobile drawer navigation.
+- Hero banner carousel slider with auto-play, touch swipe, and prev/next controls.
+- Gallery filter & lightbox modal.
+- Contact form client-side validation and interactive feedback.
+
+---
+
+### Pages & Layouts
+
+#### [MODIFY] [index.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/index.html)
+- Main Homepage featuring:
+  - Header & Navbar with dropdown menus.
+  - Interactive Swiper/Hero Banner (Naeem Enterprise EST. 1995, Apparel, Baby Apparel, Home Textile).
+  - "Quality Craftsmanship Trusted Globally" banner.
+  - Executive Overview & Company Intro section.
+  - Product Category Cards (Fabrics, Basic Apparel, Baby Garments, Home Textiles).
+  - Manufacturing & Capacity Highlights.
+  - Gallery showcase teaser.
+  - Footer with quick navigation, contact info, and copyright.
+
+#### [MODIFY] [about-us.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/about-us.html)
+- Detailed About Us page:
+  - Company background since 1995.
+  - Mission & Vision statement.
+  - Core Values & Quality Assurance policies.
+  - Manufacturing capabilities & leadership message.
+
+#### [MODIFY] [fabric.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/fabric.html)
+- Fabrics Product Page:
+  - Knitted fabrics, Woven fabrics, Dyed & Printed range, Custom Blends.
+  - Technical specifications table & high-res product showcases.
+
+#### [MODIFY] [basic-apparel.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/basic-apparel.html)
+- Apparel Showcase Page:
+  - T-shirts, Polo Shirts, Hoodies, Sweatshirts, Trousers, Activewear.
+  - Fabric composition options, sizing charts, and order specifications.
+
+#### [MODIFY] [baby-product.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/baby-product.html)
+- Baby Garments Page:
+  - Rompers, Onesies, Sleepsuits, Sets, Organic Cotton options.
+  - Safety & softness certifications display.
+
+#### [MODIFY] [home-textile.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/home-textile.html)
+- Home Textile Page:
+  - Bed linen, Towels, Kitchen linen, Cushions & Drapery.
+  - Material options & export quality details.
+
+#### [MODIFY] [gallery.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/gallery.html)
+- Factory & Product Gallery Page:
+  - Category filters (All, Factory Floor, Machinery, Products, Quality Control).
+  - Interactive photo lightbox view.
+
+#### [MODIFY] [social-responsibility.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/social-responsibility.html)
+- Social Responsibility & Sustainability Page:
+  - Eco-friendly production practices, waste management, fair labor standards.
+  - International compliance & certification badges.
+
+#### [MODIFY] [contact-us.html](file:///c:/Users/Waiz-Hussain/Desktop/aman/contact-us.html)
+- Contact & Inquiry Page:
+  - Interactive Inquiry/Quote Request form.
+  - Office & Factory address, phone, email, working hours.
+  - Embedded Google Map display.
+
+---
+
+## Verification Plan
+
+### Automated Verification
+- Serve pages locally and test loading with HTTP server (`python -m http.server 8000`).
+- Validate HTML structure and link navigation across all 9 pages.
+
+### Manual Verification
+- Verify navigation bar dropdowns and responsive hamburger drawer on mobile/tablet viewports.
+- Verify slide transitions and auto-play on the home page hero slider.
+- Verify image lightbox popup and category filtering on `gallery.html`.
+- Test form validation on `contact-us.html`.

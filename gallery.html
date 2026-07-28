@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factory & Product Gallery | AMAN Textile</title>
+  <meta name="description" content="View factory floor, production units, fabric samples, apparel collections, and home textiles manufactured by AMAN Textile.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">NE</div>
+        <div class="logo-text-wrap">
+          <span class="brand-title">AMAN Textile</span>
+          <span class="brand-sub">EST. 1995</span>
+        </div>
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Products <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i></a>
+          <div class="dropdown-menu">
+            <a href="fabric.html" class="dropdown-link">Fabrics</a>
+            <a href="basic-apparel.html" class="dropdown-link">Apparel</a>
+            <a href="baby-product.html" class="dropdown-link">Baby Garments</a>
+            <a href="home-textile.html" class="dropdown-link">Home Textile</a>
+          </div>
+        </li>
+        <li class="nav-item active"><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="social-responsibility.html" class="nav-link">Social Responsibility</a></li>
+        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      
+      <button class="mobile-toggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="bg-dark" style="padding: 120px 0 60px; margin-top: 85px; background-image: linear-gradient(rgba(1,10,41,0.85), rgba(1,10,41,0.85)), url('images/factory-1.jpg'); background-size: cover; background-position: center;">
+    <div class="container text-center">
+      <span class="section-subtitle" style="color: var(--accent-gold);">Visual Tour</span>
+      <h1 class="text-white" style="font-size: 3rem; margin-top: 10px;">Media Gallery</h1>
+      <p style="color: rgba(255,255,255,0.8); max-width: 650px; margin: 15px auto 0; font-size: 1.1rem;">
+        Explore our modern production units, factory floors, fabric rolls, and finished apparel products.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Filter Buttons -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="factory">Factory Floor</button>
+        <button class="filter-btn" data-filter="fabrics">Fabrics</button>
+        <button class="filter-btn" data-filter="apparel">Apparel</button>
+        <button class="filter-btn" data-filter="baby">Baby Garments</button>
+        <button class="filter-btn" data-filter="home">Home Textile</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <!-- Item 1 -->
+        <div class="gallery-item" data-category="factory">
+          <img src="images/factory-1.jpg" alt="Automated Cutting Floor">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Automated Cutting Floor</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Factory Floor</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item" data-category="fabrics">
+          <img src="images/fabric-1.jpg" alt="Knitted Fabric Rolls">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Premium Cotton Jersey</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Fabrics</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item" data-category="apparel">
+          <img src="images/apparel-1.jpg" alt="Export T-Shirts">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Cotton Crewneck Tees</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Apparel</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item" data-category="baby">
+          <img src="images/baby-1.jpg" alt="Infant Romper Set">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Organic Baby Bodysuit</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Baby Garments</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item" data-category="home">
+          <img src="images/hometextile-1.jpg" alt="Luxury Bed Linen">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Cotton Sateen Bedding</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Home Textile</span>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item" data-category="factory">
+          <img src="images/factory-2.jpg" alt="Stitching Lines">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Sewing & Assembly Department</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Factory Floor</span>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item" data-category="apparel">
+          <img src="images/apparel-2.jpg" alt="Fleece Hoodies">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Heavyweight Fleece Hoodies</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Apparel</span>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item" data-category="home">
+          <img src="images/hometextile-2.jpg" alt="Terry Towels">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus" style="font-size: 2rem; margin-bottom: 10px; color: var(--accent-gold);"></i>
+            <h4>Absorbent Terry Towel Range</h4>
+            <span style="font-size: 0.85rem; opacity: 0.8;">Home Textile</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-dark text-center" style="padding: 70px 0; background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-navy) 100%);">
+    <div class="container">
+      <h2 class="text-white" style="font-size: 2.3rem; margin-bottom: 15px;">Impressed By Our Operations?</h2>
+      <p style="color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 30px;">
+        Schedule a virtual or in-person factory audit and meet our manufacturing team.
+      </p>
+      <a href="contact-us.html" class="btn btn-gold">Schedule Factory Audit</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 20px;">
+            <div class="logo-badge">NE</div>
+            <div class="logo-text-wrap">
+              <span class="brand-title">AMAN Textile</span>
+              <span class="brand-sub">EST. 1995</span>
+            </div>
+          </div>
+          <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; color: rgba(255,255,255,0.7);">
+            AMAN Textile has been a trusted pioneer since 1995 in the manufacturing and exporting of premium woven & knitted garments, fabrics, baby apparel, and home textiles worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="social-responsibility.html">Social Responsibility</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Our Products</h4>
+          <ul class="footer-links">
+            <li><a href="fabric.html">Textile Fabrics</a></li>
+            <li><a href="basic-apparel.html">Apparel & Garments</a></li>
+            <li><a href="baby-product.html">Baby Products</a></li>
+            <li><a href="home-textile.html">Home Textiles</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Get In Touch</h4>
+          <ul class="contact-info-list">
+            <li><i class="fa-solid fa-location-dot"></i> <span>Plot No. 12, Sector 15, Korangi Industrial Area, Karachi, Pakistan</span></li>
+            <li><i class="fa-solid fa-phone"></i> <span>+92 (21) 3505 1234 / +92 300 8223945</span></li>
+            <li><i class="fa-solid fa-envelope"></i> <span>info@AMAN Textile.com</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span>Mon - Sat: 9:00 AM - 6:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 1995 - 2026 AMAN Textile. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
