@@ -12,13 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function closeNav() {
     if (navContainer) navContainer.classList.remove('nav-menu-active');
-    if (toggleBtn) toggleBtn.classList.remove('is-active');
+    if (toggleBtn) {
+      toggleBtn.classList.remove('is-active');
+      const openIcon = toggleBtn.querySelector('.ham-open');
+      const closeIcon = toggleBtn.querySelector('.ham-close');
+      if (openIcon) openIcon.style.display = 'block';
+      if (closeIcon) closeIcon.style.display = 'none';
+    }
     if (overlay) overlay.classList.remove('active');
   }
 
   function openNav() {
     if (navContainer) navContainer.classList.add('nav-menu-active');
-    if (toggleBtn) toggleBtn.classList.add('is-active');
+    if (toggleBtn) {
+      toggleBtn.classList.add('is-active');
+      const openIcon = toggleBtn.querySelector('.ham-open');
+      const closeIcon = toggleBtn.querySelector('.ham-close');
+      if (openIcon) openIcon.style.display = 'none';
+      if (closeIcon) closeIcon.style.display = 'block';
+    }
     if (overlay) overlay.classList.add('active');
   }
 
@@ -33,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     overlay.addEventListener('click', closeNav);
-
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeNav();
     });

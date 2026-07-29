@@ -59,9 +59,7 @@
 	<link data-minify="1" rel='stylesheet' id='helper-css'
 		href="assets/css/helper98d9.css" type='text/css'
 		media='all' />
-	<link data-minify="1" rel='stylesheet' id='hamburgers-css'
-		href="assets/css/hamburgers98d9.css"
-		type='text/css' media='all' />
+	
 	<link data-minify="1" rel='stylesheet' id='all-cursors-css'
 		href="assets/css/all-cursors98d9.css"
 		type='text/css' media='all' />
@@ -733,6 +731,35 @@
   }
 </style>
 
+
+<style id="ultra-clean-svg-header">
+  #mobile-nav-toggle {
+    display: none;
+    background: #010a29 !important;
+    border: 2px solid rgba(212,175,55,0.7) !important;
+    width: 44px !important;
+    height: 40px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+    z-index: 10000002 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+  @media (max-width: 991px) {
+    #mobile-nav-toggle {
+      display: flex !important;
+    }
+  }
+  #mobile-nav-toggle svg {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+</style>
+
 </head>
 
 <!-- BODY START -->
@@ -746,9 +773,15 @@
         <a href="index.html"><img src="assets/images/logo.svg" style="max-height: 42px; width: auto;" alt="AMAN Textile" /></a>
       </div>
       <button id="mobile-nav-toggle" type="button" aria-label="Toggle Navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
+        <svg class="ham-open" viewBox="0 0 100 80" width="24" height="24">
+          <rect width="100" height="12" rx="6" fill="#D4AF37"></rect>
+          <rect y="34" width="100" height="12" rx="6" fill="#D4AF37"></rect>
+          <rect y="68" width="100" height="12" rx="6" fill="#D4AF37"></rect>
+        </svg>
+        <svg class="ham-close" viewBox="0 0 100 100" width="24" height="24" style="display:none;">
+          <line x1="15" y1="15" x2="85" y2="85" stroke="#D4AF37" stroke-width="12" stroke-linecap="round"></line>
+          <line x1="85" y1="15" x2="15" y2="85" stroke="#D4AF37" stroke-width="12" stroke-linecap="round"></line>
+        </svg>
       </button>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
