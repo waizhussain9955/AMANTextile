@@ -1625,25 +1625,29 @@ h1, h2, h3, h4, h5, h6 {
 #mobile-nav-toggle {
   position: fixed;
   right: 15px;
-  z-index: 999;
-  top: 17px;
+  z-index: 9999;
+  top: 10px;
   border: 0;
-  background: none;
-  font-size: 24px;
+  background: rgba(1, 10, 41, 0.85);
+  font-size: 22px;
   display: none;
   transition: all 0.4s;
   outline: none;
   cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  line-height: 1;
 }
 
 #mobile-nav-toggle i {
   color: #fff;
   font-weight: 900;
+  pointer-events: none;
 }
 
 @media (max-width: 991px) {
   #mobile-nav-toggle {
-    display: inline;
+    display: block !important;
   }
   #nav-menu-container {
     display: none;
@@ -1656,8 +1660,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   padding-top: 18px;
   bottom: 0;
-  z-index: 998;
-  background: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.92);
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -1716,7 +1720,7 @@ h1, h2, h3, h4, h5, h6 {
 #mobile-body-overly {
   width: 100%;
   height: 100%;
-  z-index: 997;
+  z-index: 9997;
   top: 0;
   left: 0;
   position: fixed;
@@ -3815,4 +3819,34 @@ figure img {
 
 .text-white{
   color: #fff !important;
+}
+
+/* Mobile Responsiveness Fixes */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .slider_hero_title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+  
+  .slider_hero_title span.stroke {
+    font-size: 32px !important;
+  }
+  
+  .section-gap {
+    padding: 60px 0 !important;
+  }
+  
+  .home-main-txt {
+    font-size: 36px !important;
+  }
 }
