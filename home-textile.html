@@ -430,7 +430,7 @@
   <div class="container main-menu">
     <div class="row align-items-center justify-content-between d-flex">
       <div id="logo">
-        <a href="index.html"><img src="assets/images/AT_LOGO_LIGHT.png" style="max-height: 80px; width: auto;" alt="AMAN Textile" /></a>
+        <a href="index.html"><img src="assets/images/AT_LOGO_LIGHT.png" style="width: 220px; height: auto; max-height: none;" alt="AMAN Textile" /></a>
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
@@ -1155,13 +1155,13 @@
 </div>
 
 
-  <footer class="awam-elementor-footer footer-4264" style="background: #ffffff; padding: 80px 0 0 0; color: #333333; font-family: 'Poppins', sans-serif; border-top: 1px solid #eaeaea;">
+    <footer class="awam-elementor-footer footer-4264" style="background: #ffffff; padding: 80px 0 0 0; color: #333333; font-family: 'Poppins', sans-serif; border-top: 1px solid #eaeaea; overflow: hidden;">
     <div class="container">
       <div class="row" style="margin-bottom: 50px;">
         <!-- Column 1: Logo & Social -->
-        <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 30px;">
+        <div class="col-lg-4 col-md-12 custom-anim custom-anim-1" style="margin-bottom: 30px;">
           <a href="index.html">
-            <img src="assets/images/AT_LOGO_DARK.png" alt="AMAN Textile" style="max-height: 95px; width: auto; margin-bottom: 30px; transition: transform 0.3s ease;">
+            <img src="assets/images/AT_LOGO_DARK.png" alt="AMAN Textile" style="width: 260px; height: auto; max-height: none; margin-bottom: 30px; transition: transform 0.3s ease;">
           </a>
           <h6 style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 20px; color: #010a29;">Social</h6>
           <div class="footer-social-icons" style="display: flex; gap: 15px;">
@@ -1174,7 +1174,7 @@
         </div>
         
         <!-- Column 2: Contact -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="margin-bottom: 30px;">
+        <div class="col-lg-4 col-md-6 custom-anim custom-anim-2" style="margin-bottom: 30px;">
           <h6 style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 30px; color: #010a29;">Contact</h6>
           <div style="margin-bottom: 25px;">
             <a href="mailto:info1@AMANTextile.com" style="color: #555; text-decoration: none; font-size: 15px; transition: color 0.3s ease; font-weight: 500;">info1@AMANTextile.com</a>
@@ -1190,7 +1190,7 @@
         </div>
 
         <!-- Column 3: Address -->
-        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="margin-bottom: 30px;">
+        <div class="col-lg-4 col-md-6 custom-anim custom-anim-3" style="margin-bottom: 30px;">
           <h6 style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 30px; color: #010a29;">Address</h6>
           <div style="margin-bottom: 25px;">
             <strong style="display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #010a29; margin-bottom: 8px;">Pakistan</strong>
@@ -1205,13 +1205,26 @@
     </div>
     
     <!-- Copyright Bar -->
-    <div style="background: #010a29; color: rgba(255,255,255,0.7); padding: 25px 0; text-align: center; font-size: 13px; letter-spacing: 1px;">
-      <div class="container wow fadeIn" data-wow-delay="0.7s">
+    <div class="custom-anim custom-anim-4" style="background: #010a29; color: rgba(255,255,255,0.7); padding: 25px 0; text-align: center; font-size: 13px; letter-spacing: 1px;">
+      <div class="container">
         Copyright &copy; 2026 AMAN Textile. All Rights Reserved.
       </div>
     </div>
     
     <style>
+      @keyframes customFadeInUp {
+        0% { opacity: 0; transform: translateY(40px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .custom-anim {
+        opacity: 0;
+        animation: customFadeInUp 0.8s ease forwards;
+      }
+      .custom-anim-1 { animation-delay: 0.2s; }
+      .custom-anim-2 { animation-delay: 0.4s; }
+      .custom-anim-3 { animation-delay: 0.6s; }
+      .custom-anim-4 { animation-delay: 0.8s; }
+      
       .footer-social-icons a:hover {
         background: #D4AF37 !important;
         transform: translateY(-5px) !important;
