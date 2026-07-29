@@ -497,7 +497,13 @@
 </style>
 
 
-<style id="global-theme-fix-style">
+
+
+
+
+
+
+<style id="master-responsive-theme-style">
   /* 1. Permanent Preloader & Spinner Removal */
   #preloader, #nt-preloader, div#nt-preloader, .pace {
     display: none !important;
@@ -506,7 +512,7 @@
     pointer-events: none !important;
   }
 
-  /* 2. Force Header Visibility & Contrast */
+  /* 2. Header & Navigation Base Styling */
   #header, header#header {
     background: #010a29 !important;
     position: relative !important;
@@ -519,119 +525,59 @@
     max-width: 1200px !important;
     margin: 0 auto !important;
   }
-  #header a, #header .nav-menu > li > a {
-    color: #ffffff !important;
-    font-family: 'Poppins', sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    padding: 8px 12px !important;
-    text-decoration: none !important;
-  }
-  #header .nav-menu > li > a:hover {
-    color: #D4AF37 !important;
-  }
-  #header .nav-menu ul {
-    background: #010a29 !important;
-    border: 1px solid rgba(212,175,55,0.4) !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
-    padding: 10px 0 !important;
-  }
-  #header .nav-menu ul li a {
-    color: #ffffff !important;
-    padding: 8px 20px !important;
-    display: block !important;
-    text-transform: none !important;
-  }
-  #header .nav-menu ul li a:hover {
-    background: rgba(212,175,55,0.2) !important;
-    color: #D4AF37 !important;
-  }
 
-  /* 3. Force Section & Text Visibility Across All Pages */
-  .elementor-invisible, .wow {
-    opacity: 1 !important;
-    visibility: visible !important;
-    animation: none !important;
-    transform: none !important;
-  }
-  body {
-    opacity: 1 !important;
-    visibility: visible !important;
-    overflow-x: hidden !important;
-    background-color: #ffffff !important;
-  }
-
-  /* 4. Contrast Fix for Dark Blue Sections */
-  .dark-bg, [style*="background: #010a29"], [style*="background-color: #010a29"], [style*="background: rgb(1, 10, 41)"], [style*="background-color: rgb(1, 10, 41)"] {
-    color: #ffffff !important;
-  }
-  .dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6,
-  [style*="#010a29"] h1, [style*="#010a29"] h2, [style*="#010a29"] h3, [style*="#010a29"] h4, [style*="#010a29"] h5, [style*="#010a29"] h6,
-  [style*="#010a29"] p, [style*="#010a29"] span, [style*="#010a29"] li, [style*="#010a29"] a {
-    color: #ffffff !important;
-  }
-  [style*="#010a29"] li strong, [style*="#010a29"] a strong {
-    color: #D4AF37 !important;
-  }
-
-  /* 5. Subpage Hero Banners Typography & Height */
-  .subpage-hero-banner {
-    background-size: cover !important;
-    background-position: center !important;
-    min-height: 300px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 60px 20px !important;
-  }
-  .subpage-hero-banner h1 {
-    font-size: 38px !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
-    margin: 0 !important;
-  }
-
-  /* 6. Image Display & Container Alignment */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: inline-block !important;
-  }
-</style>
-
-
-<style id="mobile-responsive-theme-style">
-  /* Mobile Nav Toggle Button */
+  /* 3. CSS-Based Mobile Hamburger Button */
   #mobile-nav-toggle {
     display: none;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    color: #ffffff;
-    font-size: 20px;
-    padding: 6px 14px;
+    background: rgba(1, 10, 41, 0.95);
+    border: 1px solid rgba(212, 175, 55, 0.8);
+    padding: 8px;
     border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 100000;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 42px;
+    height: 38px;
+    z-index: 1000001;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   }
-  #mobile-nav-toggle:hover {
-    background: #D4AF37;
-    border-color: #D4AF37;
-    color: #010a29;
+  #mobile-nav-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #D4AF37;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  #mobile-nav-toggle.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-nav-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-nav-toggle.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* Responsive Mobile Menu Drawer */
+  /* 4. Backdrop Overlay */
+  #mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 999999;
+  }
+  #mobile-nav-overlay.active {
+    display: block !important;
+  }
+
+  /* 5. Mobile Navigation Drawer (Max Width 991px) */
   @media (max-width: 991px) {
     #mobile-nav-toggle {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
+      display: flex !important;
     }
     #header .main-menu {
       padding: 0 15px !important;
@@ -639,15 +585,16 @@
     #nav-menu-container {
       position: fixed !important;
       top: 0 !important;
-      right: -300px !important;
-      width: 280px !important;
+      right: -320px !important;
+      width: 290px !important;
       height: 100vh !important;
       background: #010a29 !important;
-      z-index: 999999 !important;
-      padding: 90px 25px 40px !important;
-      transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1) !important;
-      box-shadow: -10px 0 30px rgba(0,0,0,0.6) !important;
+      z-index: 1000000 !important;
+      padding: 85px 25px 40px !important;
+      transition: right 0.35s cubic-bezier(0.77, 0.2, 0.05, 1) !important;
+      box-shadow: -10px 0 35px rgba(0,0,0,0.8) !important;
       overflow-y: auto !important;
+      display: block !important;
     }
     #nav-menu-container.nav-menu-active {
       right: 0 !important;
@@ -655,38 +602,56 @@
     #nav-menu-container .nav-menu {
       display: flex !important;
       flex-direction: column !important;
-      gap: 12px !important;
+      align-items: flex-start !important;
+      width: 100% !important;
       margin: 0 !important;
       padding: 0 !important;
+      list-style: none !important;
     }
     #nav-menu-container .nav-menu > li {
       width: 100% !important;
       display: block !important;
+      margin: 0 !important;
     }
     #nav-menu-container .nav-menu > li > a {
       display: block !important;
-      font-size: 15px !important;
-      padding: 12px 0 !important;
-      border-bottom: 1px solid rgba(255,255,255,0.1) !important;
       color: #ffffff !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      padding: 12px 0 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1px !important;
+      text-decoration: none !important;
+    }
+    #nav-menu-container .nav-menu > li > a:hover {
+      color: #D4AF37 !important;
     }
     #nav-menu-container .nav-menu ul {
       position: static !important;
       opacity: 1 !important;
       visibility: visible !important;
-      background: rgba(255,255,255,0.06) !important;
-      border: none !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      border: 1px solid rgba(212,175,55,0.2) !important;
       box-shadow: none !important;
-      padding: 5px 0 5px 15px !important;
-      margin-top: 5px !important;
+      padding: 8px 15px !important;
+      margin: 8px 0 12px 0 !important;
       display: none !important;
       border-radius: 6px !important;
+      width: 100% !important;
     }
     #nav-menu-container .nav-menu li.menu-has-children.active > ul {
       display: block !important;
     }
-    
-    /* Layout & Image responsiveness */
+    #nav-menu-container .nav-menu ul li a {
+      color: rgba(255,255,255,0.9) !important;
+      padding: 8px 0 !important;
+      font-size: 14px !important;
+      display: block !important;
+    }
+
+    /* General Layout & Typography Responsiveness */
     .container {
       width: 100% !important;
       max-width: 100% !important;
@@ -697,7 +662,8 @@
       margin-left: -15px !important;
       margin-right: -15px !important;
     }
-    .col-md-3, .col-md-4, .col-md-6, .col-md-8, .col-md-12, .col-lg-3, .col-lg-4, .col-lg-6 {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-10, .col-md-12,
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-10, .col-lg-12 {
       width: 100% !important;
       max-width: 100% !important;
       flex: 0 0 100% !important;
@@ -705,11 +671,29 @@
     }
     .subpage-hero-banner {
       min-height: 220px !important;
-      padding: 40px 15px !important;
+      padding: 50px 15px !important;
     }
     .subpage-hero-banner h1 {
       font-size: 26px !important;
+      letter-spacing: 1px !important;
     }
+    .awam-parallax h1, .caption h1 {
+      font-size: 26px !important;
+    }
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  /* 6. Contrast Fix for Dark Blue Sections */
+  .dark-bg, [style*="background: #010a29"], [style*="background-color: #010a29"] {
+    color: #ffffff !important;
+  }
+  .dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6,
+  [style*="#010a29"] h1, [style*="#010a29"] h2, [style*="#010a29"] h3, [style*="#010a29"] h4, [style*="#010a29"] h5, [style*="#010a29"] h6,
+  [style*="#010a29"] p, [style*="#010a29"] span, [style*="#010a29"] li, [style*="#010a29"] a {
+    color: #ffffff !important;
   }
 </style>
 
@@ -733,7 +717,11 @@
       <div id="logo">
         <a href="index.html"><img src="assets/images/logo.svg" style="max-height: 42px; width: auto;" alt="AMAN Textile" /></a>
       </div>
-      <button id="mobile-nav-toggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+      <button id="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>

@@ -1,37 +1,48 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile Nav Toggle
   const toggleBtn = document.getElementById('mobile-nav-toggle');
   const navContainer = document.getElementById('nav-menu-container');
-  
+  let overlay = document.getElementById('mobile-nav-overlay');
+
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'mobile-nav-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  function closeNav() {
+    if (navContainer) navContainer.classList.remove('nav-menu-active');
+    if (toggleBtn) toggleBtn.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+  }
+
+  function openNav() {
+    if (navContainer) navContainer.classList.add('nav-menu-active');
+    if (toggleBtn) toggleBtn.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+  }
+
   if (toggleBtn && navContainer) {
     toggleBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      navContainer.classList.toggle('nav-menu-active');
-      const icon = toggleBtn.querySelector('i');
-      if (icon) {
-        if (navContainer.classList.contains('nav-menu-active')) {
-          icon.className = 'fa-solid fa-xmark';
-        } else {
-          icon.className = 'fa-solid fa-bars';
-        }
+      if (navContainer.classList.contains('nav-menu-active')) {
+        closeNav();
+      } else {
+        openNav();
       }
     });
 
-    // Close mobile nav on outside click
-    document.addEventListener('click', function(e) {
-      if (navContainer.classList.contains('nav-menu-active') && !navContainer.contains(e.target) && !toggleBtn.contains(e.target)) {
-        navContainer.classList.remove('nav-menu-active');
-        const icon = toggleBtn.querySelector('i');
-        if (icon) icon.className = 'fa-solid fa-bars';
-      }
+    overlay.addEventListener('click', closeNav);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeNav();
     });
   }
 
-  # Mobile Submenu Accordion Toggle
-  const dropdownItems = document.querySelectorAll('.menu-has-children > a');
-  dropdownItems.forEach(item => {
-    item.addEventListener('click', function(e) {
+  // Mobile Submenu Accordion Toggle
+  const dropdownLinks = document.querySelectorAll('#nav-menu-container .menu-has-children > a');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
       if (window.innerWidth <= 991) {
         e.preventDefault();
         const parent = this.parentElement;
