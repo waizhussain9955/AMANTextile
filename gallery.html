@@ -553,6 +553,114 @@
   }
 </style>
 
+
+<style id="mobile-responsive-theme-style">
+  /* Mobile Nav Toggle Button */
+  #mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100000;
+  }
+  #mobile-nav-toggle:hover {
+    background: #D4AF37;
+    border-color: #D4AF37;
+    color: #010a29;
+  }
+
+  /* Responsive Mobile Menu Drawer */
+  @media (max-width: 991px) {
+    #mobile-nav-toggle {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    #header .main-menu {
+      padding: 0 15px !important;
+    }
+    #nav-menu-container {
+      position: fixed !important;
+      top: 0 !important;
+      right: -300px !important;
+      width: 280px !important;
+      height: 100vh !important;
+      background: #010a29 !important;
+      z-index: 999999 !important;
+      padding: 90px 25px 40px !important;
+      transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1) !important;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.6) !important;
+      overflow-y: auto !important;
+    }
+    #nav-menu-container.nav-menu-active {
+      right: 0 !important;
+    }
+    #nav-menu-container .nav-menu {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    #nav-menu-container .nav-menu > li {
+      width: 100% !important;
+      display: block !important;
+    }
+    #nav-menu-container .nav-menu > li > a {
+      display: block !important;
+      font-size: 15px !important;
+      padding: 12px 0 !important;
+      border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+      color: #ffffff !important;
+    }
+    #nav-menu-container .nav-menu ul {
+      position: static !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      background: rgba(255,255,255,0.06) !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 5px 0 5px 15px !important;
+      margin-top: 5px !important;
+      display: none !important;
+      border-radius: 6px !important;
+    }
+    #nav-menu-container .nav-menu li.menu-has-children.active > ul {
+      display: block !important;
+    }
+    
+    /* Layout & Image responsiveness */
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    .row {
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+    }
+    .col-md-3, .col-md-4, .col-md-6, .col-md-8, .col-md-12, .col-lg-3, .col-lg-4, .col-lg-6 {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+      margin-bottom: 20px !important;
+    }
+    .subpage-hero-banner {
+      min-height: 220px !important;
+      padding: 40px 15px !important;
+    }
+    .subpage-hero-banner h1 {
+      font-size: 26px !important;
+    }
+  }
+</style>
+
 </head>
 
 <!-- BODY START -->
@@ -564,10 +672,11 @@
 
 	<header id="header">
   <div class="container main-menu">
-    <div class="row align-items-center justify-content-between d-flex">
+    <div class="row align-items-center justify-content-between d-flex" style="position: relative;">
       <div id="logo">
         <a href="index.html"><img src="assets/images/logo.svg" style="max-height: 42px; width: auto;" alt="AMAN Textile" /></a>
       </div>
+      <button id="mobile-nav-toggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
@@ -1363,6 +1472,7 @@ src="https://www.youtube.com/embed/NBnzbuaBufQ?autoplay=1&mute=1&controls=1">
 		}, !1)</script>
 	<script data-no-minify="1" async
 		src="assets/js/lazyload.min.js"></script>
+<script src="script.js"></script>
 </body>
 
 
