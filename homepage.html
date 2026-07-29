@@ -215,16 +215,16 @@
 
 
 
-  <script type='text/javascript' src="assets/js/jquery.minaf6c.js?ver=3.6.0" id='jquery-core-js'></script>
-  <script type='text/javascript' src="assets/js/jquery-migrate.mind617.js?ver=3.3.2"
+  <script type='text/javascript' src="assets/js/jquery.minaf6c.js" id='jquery-core-js'></script>
+  <script type='text/javascript' src="assets/js/jquery-migrate.mind617.js"
     id='jquery-migrate-js'></script>
-  <script type='text/javascript' src="assets/js/wow.min5152.js?ver=1.0"
+  <script type='text/javascript' src="assets/js/wow.min5152.js"
     id='wow-js'></script>
   <script data-minify="1" type='text/javascript'
-    src="assets/js/all-cursors98d9.js?ver=1666259516"
+    src="assets/js/all-cursors98d9.js"
     id='all-cursors-js'></script>
   <script type='text/javascript'
-    src="assets/js/jquery-nice-select.min5152.js?ver=1.0"
+    src="assets/js/jquery-nice-select.min5152.js"
     id='jquery-nice-select-js'></script>
 
 
@@ -812,6 +812,12 @@
   }
 </style>
 
+
+    <style id="remove-preloader-fix">
+      #preloader, #nt-preloader, div#nt-preloader, .pace { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; z-index: -9999 !important; }
+      body { overflow: auto !important; }
+    </style>
+    
 </head>
 
 <!-- BODY START -->
@@ -1942,7 +1948,7 @@
 
 
   <link data-minify="1" rel='stylesheet' id='swiper-css'
-    href="assets/css/swiper.min98d9.css?ver=1666259516"
+    href="assets/css/swiper.min98d9.css"
     type='text/css' media='all' />
 
 
@@ -1950,28 +1956,28 @@
 
 
   <link rel='stylesheet' id='e-animations-css'
-    href="assets/css/animations.min3621.css?ver=3.7.8" type='text/css'
+    href="assets/css/animations.min3621.css" type='text/css'
     media='all' />
   <script data-minify="1" type='text/javascript'
-    src="assets/js/scripts98d9.js?ver=1666259516"
+    src="assets/js/scripts98d9.js"
     id='awam-main-js'></script>
-  <script type='text/javascript' src="assets/js/wpmssab.minec0e.js?ver=1606941982"
+  <script type='text/javascript' src="assets/js/wpmssab.minec0e.js"
     id='wpmssab-js'></script>
-  <script type='text/javascript' src="assets/js/SmoothScroll.min5b3c.js?ver=1.4.10"
+  <script type='text/javascript' src="assets/js/SmoothScroll.min5b3c.js"
     id='SmoothScroll-js'></script>
-  <script type='text/javascript' src="assets/js/wpmss.minec0e.js?ver=1606941982" id='wpmss-js'></script>
-  <script type='text/javascript' src="assets/js/pace.min5152.js?ver=1.0"
+  <script type='text/javascript' src="assets/js/wpmss.minec0e.js" id='wpmss-js'></script>
+  <script type='text/javascript' src="assets/js/pace.min5152.js"
     id='pace-js'></script>
-  <script type='text/javascript' src="assets/js/swiper.min5152.js?ver=1.0"
+  <script type='text/javascript' src="assets/js/swiper.min5152.js"
     id='swiper-js'></script>
-  <script type='text/javascript' src="assets/js/splitting.min5152.js?ver=1.0"
+  <script type='text/javascript' src="assets/js/splitting.min5152.js"
     id='splitting-js'></script>
   <script type='text/javascript'
-    src="assets/js/simpleParallax.min1eb7.js?ver=6.0.3"
+    src="assets/js/simpleParallax.min1eb7.js"
     id='simple-parallax-js'></script>
-  <script type='text/javascript' src="assets/js/webpack.runtime.min3621.js?ver=3.7.8"
+  <script type='text/javascript' src="assets/js/webpack.runtime.min3621.js"
     id='elementor-webpack-runtime-js'></script>
-  <script type='text/javascript' src="assets/js/frontend-modules.min3621.js?ver=3.7.8"
+  <script type='text/javascript' src="assets/js/frontend-modules.min3621.js"
     id='elementor-frontend-modules-js'></script>
 
 
@@ -2035,14 +2041,14 @@
       }, "post": { "id": 22, "title": "Awam%20%E2%80%93%20Awam", "excerpt": "", "featuredImage": false }
     };
   </script>
-  <script type='text/javascript' src="assets/js/frontend.min3621.js?ver=3.7.8"
+  <script type='text/javascript' src="assets/js/frontend.min3621.js"
     id='elementor-frontend-js'></script>
-  <script type='text/javascript' src="assets/js/preloaded-modules.min3621.js?ver=3.7.8"
+  <script type='text/javascript' src="assets/js/preloaded-modules.min3621.js"
     id='preloaded-modules-js'></script>
-  <script type='text/javascript' src="assets/js/jarallax.min1eb7.js?ver=6.0.3"
+  <script type='text/javascript' src="assets/js/jarallax.min1eb7.js"
     id='jarallax-js'></script>
   <script data-minify="1" type='text/javascript'
-    src="assets/js/custom-scripts98d9.js?ver=1666259516"
+    src="assets/js/custom-scripts98d9.js"
     id='awam-addons-custom-scripts-js'></script>
   <script>window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
       var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
