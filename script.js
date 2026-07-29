@@ -2,23 +2,23 @@
 document.addEventListener('DOMContentLoaded', function() {
   const toggleBtn = document.getElementById('mobile-nav-toggle');
   const navContainer = document.getElementById('nav-menu-container');
-  let overlay = document.getElementById('mobile-nav-overlay');
+  let overlay = document.getElementById('mobile-body-overlay');
 
   if (!overlay) {
     overlay = document.createElement('div');
-    overlay.id = 'mobile-nav-overlay';
+    overlay.id = 'mobile-body-overlay';
     document.body.appendChild(overlay);
   }
 
   function closeNav() {
     if (navContainer) navContainer.classList.remove('nav-menu-active');
-    if (toggleBtn) toggleBtn.classList.remove('open');
+    if (toggleBtn) toggleBtn.classList.remove('is-active');
     if (overlay) overlay.classList.remove('active');
   }
 
   function openNav() {
     if (navContainer) navContainer.classList.add('nav-menu-active');
-    if (toggleBtn) toggleBtn.classList.add('open');
+    if (toggleBtn) toggleBtn.classList.add('is-active');
     if (overlay) overlay.classList.add('active');
   }
 
