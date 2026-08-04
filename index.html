@@ -684,7 +684,7 @@
                       data-id="726d2fa" data-element_type="widget" data-widget_type="awam-home-slider.default">
                       <div class="elementor-widget-container">
                         <div class="slider home-slider fixed-slider slide-controls slider-id-726d2fa"
-                          data-slider-settings='{"autoplay":{"delay":7000,"disableOnInteraction":false},"parallax":true,"mobparallax":true,"loop":true,"speed":2500}'>
+                          data-slider-settings='{"autoplay":{"delay":2000,"disableOnInteraction":false},"parallax":true,"mobparallax":true,"loop":true,"speed":2500}'>
                           <div class="swiper-container parallax-slider">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide">
@@ -1110,8 +1110,28 @@
     padding-bottom: 20px; /* Remove extra space at bottom */
 }
 </style>
+
+<style>
+.project-carousel .img img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+.project-carousel .swiper-slide:hover .img img {
+    transform: scale(1.04);
+}
+.project-carousel.metro .content {
+    margin-bottom: 0 !important;
+}
+.project-carousel .swiper-slide {
+    padding-bottom: 0 !important;
+}
+.elementor-element.elementor-element-c54a830 {
+    margin-bottom: -60px !important;
+}
+</style>
 <div class="project-carousel metro type-1"
-                          data-slider-settings='{"autoplay":{"delay":7000,"disableOnInteraction":false},"parallax":true,"mobparallax":true,"loop":true,"speed":2500}'>
+                          data-slider-settings='{"autoplay":{"delay":2000,"disableOnInteraction":false},"parallax":true,"mobparallax":true,"loop":true,"speed":2500}'>
                           <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
                             <div class="swiper-wrapper"
                               style="transition-duration: 0ms; transform: translate3d(-1187.25px, 0px, 0px);">
@@ -1347,26 +1367,7 @@
             <img src="assets/images/AT_LOGO_DARK-removebg.png"
               style="width: 140px; height: auto; display: block; transition: transform 0.3s ease;" alt="AMAN Textile" />
           </a>
-          <h6
-            style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 25px; color: #010a29;">
-            Social</h6>
-          <div class="footer-social-icons" style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a href="https://www.linkedin.com/company/amantextile" target="_blank"
-              style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #010a29; color: #fff; transition: all 0.3s ease; text-decoration: none;"><i
-                class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/amantextile" target="_blank"
-              style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #010a29; color: #fff; transition: all 0.3s ease; text-decoration: none;"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/amantextile" target="_blank"
-              style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #010a29; color: #fff; transition: all 0.3s ease; text-decoration: none;"><i
-                class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://twitter.com/amantextile" target="_blank"
-              style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #010a29; color: #fff; transition: all 0.3s ease; text-decoration: none;"><i
-                class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://wa.me/923008223945" target="_blank"
-              style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #010a29; color: #fff; transition: all 0.3s ease; text-decoration: none;"><i
-                class="fa-brands fa-whatsapp"></i></a>
-          </div>
+          
         </div>
 
         <!-- Column 2: Contact -->
@@ -1639,20 +1640,20 @@
   </script>
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function() {
-        var prodSwiperEl = document.querySelector('.project-carousel .swiper-container');
-        if (prodSwiperEl && prodSwiperEl.swiper) {
-          prodSwiperEl.swiper.params.autoplay = {
-              delay: 2500,
-              disableOnInteraction: false
-          };
-          prodSwiperEl.swiper.autoplay.start();
+  
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function() {
+        var el = document.querySelector('.project-carousel .swiper-container');
+        if (el && el.swiper) {
+            el.swiper.params.autoplay.delay = 2500;
+            el.swiper.params.autoplay.disableOnInteraction = false;
+            el.swiper.autoplay.start();
         }
-      }, 1500);
-    });
-  </script>
+    }, 1500);
+});
+</script>
 </body>
 
 
