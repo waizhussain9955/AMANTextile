@@ -3850,3 +3850,53 @@ img {
     font-size: 36px !important;
   }
 }
+
+/* =================================== */
+/*  Responsive Fixes (Added by Agent)
+/* =================================== */
+
+@media (max-width: 991px) {
+    /* Logo Area */
+    #logo img {
+        max-height: 50px !important;
+        margin-top: 10px;
+    }
+    
+    /* Navigation Menu Padding */
+    .main-menu {
+        padding: 10px !important;
+    }
+
+    /* Sliders and Hero text */
+    .slider_hero_title {
+        font-size: 28px !important;
+        padding: 40px 0 !important;
+    }
+    .elementor-element.elementor-element-c54a830 {
+        margin-bottom: 0px !important; /* Remove negative margin on mobile */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Footer */
+    .awam-elementor-footer .row {
+        text-align: center;
+        flex-direction: column;
+    }
+    .awam-elementor-footer .col-md-6, .awam-elementor-footer .col-md-12 {
+        margin-bottom: 30px !important;
+    }
+    .awam-elementor-footer img {
+        margin: 0 auto !important; /* Center the logo */
+    }
+    
+    /* Products Slider */
+    .project-carousel .swiper-slide {
+        padding-bottom: 20px !important;
+    }
+    
+    /* Social Icons in footer (if any left) */
+    .footer-social-icons {
+        justify-content: center !important;
+    }
+}
