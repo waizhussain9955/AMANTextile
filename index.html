@@ -1130,6 +1130,34 @@
     margin-bottom: -60px;
 }
 </style>
+<style>
+.project-carousel .img {
+    height: 380px !important;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f5f7;
+}
+.project-carousel .img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+.project-carousel .swiper-slide:hover .img img {
+    transform: scale(1.03);
+}
+.project-carousel.metro .content {
+    margin-bottom: 0 !important;
+}
+.project-carousel .swiper-slide {
+    padding-bottom: 0 !important;
+}
+.elementor-element.elementor-element-c54a830 {
+    margin-bottom: -60px;
+}
+</style>
 <div class="project-carousel metro type-1"
                           data-slider-settings='{"autoplay":{"delay":2000,"disableOnInteraction":false},"parallax":true,"mobparallax":true,"loop":true,"speed":2500}'>
                           <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
@@ -1650,6 +1678,52 @@ document.addEventListener("DOMContentLoaded", function () {
             el.swiper.params.autoplay.delay = 2500;
             el.swiper.params.autoplay.disableOnInteraction = false;
             el.swiper.autoplay.start();
+        }
+    }, 1500);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function() {
+        var swiperContainer = document.querySelector('.project-carousel .swiper-container');
+        if (swiperContainer) {
+            // Destroy theme's default Swiper if it exists
+            if (swiperContainer.swiper) {
+                try {
+                    swiperContainer.swiper.destroy(true, true);
+                } catch(e) {
+                    console.log('Error destroying swiper:', e);
+                }
+            }
+            
+            // Re-initialize with perfect settings
+            new Swiper(swiperContainer, {
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: 30,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    nextEl: '.project-carousel .next-ctrl',
+                    prevEl: '.project-carousel .prev-ctrl',
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                }
+            });
         }
     }, 1500);
 });
