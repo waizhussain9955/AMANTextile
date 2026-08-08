@@ -417,14 +417,17 @@
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
 
+    
+
+
     <style id="custom-gallery-styles">
       .gallery .thumb {
           margin-bottom: 30px !important;
+          padding: 0 10px !important;
       }
       .gallery .thumb img,
       .gallery img.img-thumbnail {
           width: 100% !important;
-          height: 360px !important;
           object-fit: cover !important;
           border-radius: 12px !important;
           border: 3px solid #ffffff !important;
@@ -437,16 +440,49 @@
           transform: scale(1.03) !important;
           box-shadow: 0 12px 35px rgba(0,0,0,0.22) !important;
       }
-      @media (max-width: 991px) {
+      
+      /* Desktop (4 columns) */
+      @media (min-width: 992px) {
+          .gallery .thumb {
+              width: 25% !important;
+              float: left !important;
+          }
+          .gallery .thumb:nth-child(4n+1) {
+              clear: left !important;
+          }
+          .gallery .thumb img,
+          .gallery img.img-thumbnail {
+              height: 360px !important;
+          }
+      }
+      
+      /* Tablet (3 columns) */
+      @media (min-width: 768px) and (max-width: 991px) {
+          .gallery .thumb {
+              width: 33.333% !important;
+              float: left !important;
+          }
+          .gallery .thumb:nth-child(3n+1) {
+              clear: left !important;
+          }
           .gallery .thumb img,
           .gallery img.img-thumbnail {
               height: 280px !important;
           }
       }
+      
+      /* Mobile (2 columns) */
       @media (max-width: 767px) {
+          .gallery .thumb {
+              width: 50% !important;
+              float: left !important;
+          }
+          .gallery .thumb:nth-child(2n+1) {
+              clear: left !important;
+          }
           .gallery .thumb img,
           .gallery img.img-thumbnail {
-              height: 220px !important;
+              height: 200px !important;
           }
       }
     </style>
