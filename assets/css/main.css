@@ -3900,3 +3900,28 @@ img {
         justify-content: center !important;
     }
 }
+
+
+/* =================================== */
+/*  Gallery Images Alignment & Style
+/* =================================== */
+.gallery .thumb {
+    margin-bottom: 30px !important;
+}
+.gallery .thumb img,
+.gallery img.img-thumbnail {
+    width: 100% !important;
+    height: 380px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    display: block;
+}
+
+.gallery .thumb a:hover img,
+.gallery .thumb img:hover {
+    transform: scale(1.03) !important;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.22) !important;
+}
