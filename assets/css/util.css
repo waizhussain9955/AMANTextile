@@ -2560,10 +2560,14 @@
 
 
 	.ele-img img {
-		display: none !important;
+		width: 100% !important;
+		height: auto !important;
+		margin-bottom: 25px !important;
 	}
 	.ele-img-2 img {
-		display: none !important;
+		width: 100% !important;
+		height: auto !important;
+		margin-bottom: 25px !important;
 	}
 
 	/*.pad-mpbile{
