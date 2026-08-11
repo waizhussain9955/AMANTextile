@@ -4084,7 +4084,7 @@ img {
 			.gallery .thumb {
 				width: 50% !important;
 				float: left !important;
-				margin-bottom: 45px !important;
+				margin-bottom: 65px !important;
 			}
 
 			.gallery .thumb:nth-child(2n+1) {
