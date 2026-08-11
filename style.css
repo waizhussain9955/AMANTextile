@@ -860,3 +860,75 @@ textarea.form-control {
     padding: 24px;
   }
 }
+
+/* --- Extra Mobile Fixes --- */
+@media (max-width: 768px) {
+  /* Footer inline columns -> stack properly */
+  .row.align-items-start,
+  .row[style*="margin-bottom: 40px"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  [class*="col-lg-4"],
+  [class*="col-md-6"],
+  [class*="col-md-12"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Navbar brand text size */
+  .brand-title { font-size: 1.1rem; }
+  .brand-sub { font-size: 0.65rem; }
+
+  /* Hero slider */
+  .hero-slider-section {
+    height: 65vh;
+    min-height: 420px;
+  }
+  .slide-title { font-size: 1.8rem !important; }
+  .slide-desc  { font-size: 1rem !important; }
+
+  /* Product carousel slides */
+  .project-carousel .swiper-slide {
+    width: 85vw !important;
+  }
+  .project-carousel .swiper-slide .img img {
+    height: 200px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  /* Visit Page button always visible on mobile (no hover on touch) */
+  .slide-visit-overlay {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: rgba(56, 4, 14, 0.45) !important;
+  }
+  .visit-page-btn {
+    transform: translateY(0) !important;
+    padding: 10px 22px !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* Stats grid */
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  .stat-number { font-size: 2.4rem; }
+}
+
+@media (max-width: 480px) {
+  .slide-title { font-size: 1.5rem !important; }
+  .nav-container { height: 70px; }
+  .logo-badge { width: 42px; height: 42px; font-size: 1.1rem; }
+
+  .project-carousel .swiper-slide .img img {
+    height: 170px !important;
+  }
+  .visit-page-btn {
+    padding: 8px 16px !important;
+    font-size: 0.75rem !important;
+  }
+}
