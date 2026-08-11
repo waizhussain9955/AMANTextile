@@ -861,14 +861,6 @@ textarea.form-control {
   }
 }
 
-/* --- Project Carousel Uniform Image Sizing --- */
-.project-carousel .swiper-slide .img img {
-  height: 450px !important;
-  width: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-}
-
 /* --- Extra Mobile Fixes --- */
 @media (max-width: 768px) {
   /* Footer inline columns -> stack properly */
@@ -902,11 +894,6 @@ textarea.form-control {
     display: none !important;
   }
   
-  /* Make carousel images slightly shorter on mobile */
-  .project-carousel .swiper-slide .img img {
-    height: 380px !important;
-  }
-
   /* Stats grid */
   .grid-3, .grid-4 {
     grid-template-columns: 1fr !important;
