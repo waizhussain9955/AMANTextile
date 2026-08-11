@@ -469,7 +469,7 @@
 			<div class="elementor-section-wrap m-t-60">
 
 
-				<section
+				<section id="dynamic-banner-section"
 					class="awam-parallax jarallax parallax-yes elementor-section elementor-top-section elementor-element elementor-element-cca5f3b elementor-section-stretched elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
 					data-awam-parallax="{&quot;type&quot;:&quot;scroll&quot;,&quot;speed&quot;:&quot;0.4&quot;,&quot;imgsize&quot;:&quot;cover&quot;,&quot;imgsrc&quot;:&quot;assets/images/basic-apparel.jpg&quot;,&quot;tablet&quot;:&quot;&quot;,&quot;phone&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;&quot;}"
 					data-id="cca5f3b" data-element_type="section"
@@ -901,6 +901,26 @@
 			const urlParams = new URLSearchParams(window.location.search);
 			const title = urlParams.get('title');
 			const imagesParam = urlParams.get('images');
+			const bannerParam = urlParams.get('banner');
+			
+			if (bannerParam) {
+				const section = document.getElementById('dynamic-banner-section');
+				if (section) {
+					// Update Jarallax dynamically
+					const jarallaxDiv = section.querySelector('.jarallax-container > div');
+					if (jarallaxDiv) {
+						jarallaxDiv.style.backgroundImage = 'url("' + bannerParam + '")';
+					} else {
+						// fallback if jarallax runs later
+						let parallaxData = section.getAttribute('data-awam-parallax');
+						if(parallaxData) {
+							let parsed = JSON.parse(parallaxData.replace(/&quot;/g,'"'));
+							parsed.imgsrc = bannerParam;
+							section.setAttribute('data-awam-parallax', JSON.stringify(parsed).replace(/"/g, '&quot;'));
+						}
+					}
+				}
+			}
 			
 			if (title) {
 				document.title = title + " - Awam";
