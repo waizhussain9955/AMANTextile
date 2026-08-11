@@ -889,12 +889,6 @@ textarea.form-control {
   .slide-title { font-size: 1.8rem !important; }
   .slide-desc  { font-size: 1rem !important; }
 
-  /* Product carousel slides */
-  .project-carousel .swiper-slide {
-    width: 85vw !important;
-  }
-  
-
   /* Hide Visit Page hover overlay completely on mobile (looks broken on touch) */
   .slide-visit-overlay {
     display: none !important;
