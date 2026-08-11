@@ -760,8 +760,9 @@
 .slide-visit-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(56, 4, 14, 0.55);
+  background: rgba(56, 4, 14, 0.65);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -769,15 +770,30 @@
   z-index: 20;
   pointer-events: none;
 }
+.overlay-category {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateY(-15px);
+  transition: all 0.35s ease;
+  text-align: center;
+}
 .project-carousel .swiper-slide:hover .slide-visit-overlay {
   opacity: 1;
   pointer-events: auto;
 }
+.project-carousel .swiper-slide:hover .overlay-category {
+  transform: translateY(0px);
+}
 .visit-page-btn {
   display: inline-block;
   padding: 13px 34px;
-  background: #ffffff;
-  color: #38040e;
+  background: #38040e;
+  color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
@@ -785,7 +801,7 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 50px;
-  border: 2px solid #ffffff;
+  border: 2px solid #38040e;
   transform: translateY(15px);
   transition: all 0.35s ease;
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
@@ -794,10 +810,10 @@
   transform: translateY(0px);
 }
 .visit-page-btn:hover {
-  background: #38040e;
-  color: #ffffff;
+  background: #ffffff;
+  color: #38040e;
   border-color: #ffffff;
-  box-shadow: 0 12px 35px rgba(56,4,14,0.5);
+  box-shadow: 0 12px 35px rgba(227,0,15,0.5);
 }
 
 /* === Mobile: Hide Visit Button Always (looks broken on touch) === */
@@ -1482,7 +1498,12 @@
                                         data-delay="300" style="visibility: visible;"></span><img
                                         src="assets/images/2.jpg" alt="" data-lazy-src="assets/images/2.jpg"
                                         data-ll-status="loaded" class="entered lazyloaded"></span>
-<div class="slide-visit-overlay"><a href="basic-apparel.html" class="visit-page-btn">Visit Page</a></div>
+<div class="slide-visit-overlay">
+  <div class="overlay-content">
+    <h4 class="overlay-category">Kitchen Items</h4>
+    <a href="basic-apparel.html" class="visit-page-btn">Visit Page</a>
+  </div>
+</div>
 </div>
                                   <div class="cont-inner">
                                     <h6 class="projects-post-cats"><a href="javascript:void(0);" title="">AMAN
@@ -1501,7 +1522,12 @@
                                         data-delay="100" style="visibility: visible;"></span><img
                                         src="assets/images/3.jpg" alt="" data-lazy-src="assets/images/3.jpg"
                                         data-ll-status="loaded" class="entered lazyloaded"></span>
-<div class="slide-visit-overlay"><a href="baby-product.html" class="visit-page-btn">Visit Page</a></div>
+<div class="slide-visit-overlay">
+  <div class="overlay-content">
+    <h4 class="overlay-category">Baby Items</h4>
+    <a href="baby-product.html" class="visit-page-btn">Visit Page</a>
+  </div>
+</div>
 </div>
                                   <div class="cont-inner">
                                     <h6 class="projects-post-cats"><a href="javascript:void(0);" title="">AMAN
@@ -1522,7 +1548,12 @@
                                         data-delay="100" style="visibility: visible;"></span><img
                                         src="assets/images/5.jpg" alt="" data-lazy-src="assets/images/5.jpg"
                                         data-ll-status="loaded" class="entered lazyloaded"></span>
-<div class="slide-visit-overlay"><a href="home-textile.html" class="visit-page-btn">Visit Page</a></div>
+<div class="slide-visit-overlay">
+  <div class="overlay-content">
+    <h4 class="overlay-category">Home Textile</h4>
+    <a href="home-textile.html" class="visit-page-btn">Visit Page</a>
+  </div>
+</div>
 </div>
                                   <div class="cont-inner">
                                     <h6 class="projects-post-cats"><a href="javascript:void(0);" title="">AMAN
