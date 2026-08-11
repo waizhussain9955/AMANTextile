@@ -748,6 +748,60 @@
       }
     </style>
 
+
+<style>
+/* === Visit Page Hover Button on Product Carousel === */
+.project-carousel .swiper-slide .content {
+  position: relative;
+  overflow: hidden;
+}
+.project-carousel .swiper-slide .img {
+  position: relative;
+  overflow: hidden;
+}
+.slide-visit-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(56, 4, 14, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 20;
+  pointer-events: none;
+}
+.project-carousel .swiper-slide:hover .slide-visit-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.visit-page-btn {
+  display: inline-block;
+  padding: 13px 34px;
+  background: #ffffff;
+  color: #38040e;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  transform: translateY(15px);
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.project-carousel .swiper-slide:hover .visit-page-btn {
+  transform: translateY(0px);
+}
+.visit-page-btn:hover {
+  background: #38040e;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 12px 35px rgba(56,4,14,0.5);
+}
+</style>
 </head>
 
 <!-- BODY START -->
@@ -1295,6 +1349,7 @@
                                         data-delay="300" style="visibility: visible;"></span><img
                                         src="assets/images/2.jpg" alt="" data-lazy-src="assets/images/2.jpg"
                                         data-ll-status="loaded" class="entered lazyloaded"></span></div>
+                                  <div class="slide-visit-overlay"><a href="basic-apparel.html" class="visit-page-btn">Visit Page</a></div>
                                   
                                 </div>
                               </div>
@@ -1305,6 +1360,7 @@
                                         data-delay="100" style="visibility: visible;"></span><img
                                         src="assets/images/3.jpg" alt="" data-lazy-src="assets/images/3.jpg"
                                         data-ll-status="loaded" class="entered lazyloaded"></span></div>
+                                  <div class="slide-visit-overlay"><a href="baby-product.html" class="visit-page-btn">Visit Page</a></div>
                                   
                                 </div>
                               </div>
@@ -1317,6 +1373,7 @@
                                         data-delay="100" style="visibility: visible;"></span><img
                                         src="assets/images/5.jpg" alt="" data-lazy-src="assets/images/5.jpg"
                                         data-ll-status="loaded" class="entered lazyloaded"></span></div>
+                                  <div class="slide-visit-overlay"><a href="home-textile.html" class="visit-page-btn">Visit Page</a></div>
                                   
                                 </div>
                               </div>
