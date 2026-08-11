@@ -924,6 +924,12 @@
 			const title = urlParams.get('title');
 			const imagesParam = urlParams.get('images');
 			
+			// Clean up the URL so it doesn't look ugly
+			if (window.history.replaceState) {
+				const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+				window.history.replaceState({path: cleanUrl}, '', cleanUrl);
+			}
+			
 			if (title) {
 				document.title = title + " - Awam";
 				const heroTitle = document.querySelector('.slider_hero_title');
