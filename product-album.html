@@ -704,97 +704,8 @@
 
 				<section class="blue-bg m-b-50 p-t-50 p-b-50">
 					<div class="container">
-						<div class="row gallery">
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-1.jpg"
-											alt="Oven Mitts Green">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Pot%20Holders&images=product-album.html%3Ftitle%3DPot%2520Holders%26images%3Dassets/images/ba-2.jpg%252Cassets/images/kitchen%2520img-1.webp%252Cassets/images/ba-3.jpg%252Cassets/images/ba-4.jpg%252Cassets/images/ba-1.jpg%252Cassets/images/ba-3.jpg%252Cassets/images/ba-4.jpg%252Cassets/images/ba-5.jpg" title="Pot Holders" class="product-title" style="text-decoration: none !important;">Pot Holders</a>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-3.jpg"
-											alt="Dish Towels Blue">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Dish%20Towels%20Blue&images=assets/images/ba-3.jpg%2Cassets/images/ba-4.jpg%2Cassets/images/ba-5.jpg%2Cassets/images/ba-6.jpg" title="Dish Towels Blue" class="product-title" style="text-decoration: none !important;">Dish Towels Blue</a>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-4.jpg"
-											alt="Oven Mitts Set">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Oven%20Mitts%20Set&images=assets/images/ba-4.jpg%2Cassets/images/ba-5.jpg%2Cassets/images/ba-6.jpg%2Cassets/images/ba-7.jpg" title="Oven Mitts Set" class="product-title" style="text-decoration: none !important;">Oven Mitts Set</a>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-5.jpg"
-											alt="Pot Holders Pack">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Pot%20Holders%20Pack&images=assets/images/ba-5.jpg%2Cassets/images/ba-6.jpg%2Cassets/images/ba-7.jpg%2Cassets/images/ba-8.jpg" title="Pot Holders Pack" class="product-title" style="text-decoration: none !important;">Pot Holders Pack</a>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-6.jpg"
-											alt="Kitchen Towels">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Kitchen%20Towels&images=assets/images/ba-6.jpg%2Cassets/images/ba-7.jpg%2Cassets/images/ba-8.jpg%2Cassets/images/ba-1.jpg" title="Kitchen Towels" class="product-title" style="text-decoration: none !important;">Kitchen Towels</a>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-7.jpg"
-											alt="Oven Mitts Red">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Oven%20Mitts%20Red&images=assets/images/ba-7.jpg%2Cassets/images/ba-8.jpg%2Cassets/images/ba-1.jpg%2Cassets/images/ba-2.jpg" title="Oven Mitts Red" class="product-title" style="text-decoration: none !important;">Oven Mitts Red</a>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-								<div class="product-gallery">
-									<div class="img-wrapper">
-										<img class="img-fluid img-thumbnail" src="assets/images/ba-8.jpg"
-											alt="Dish Towels Set">
-										<div class="hover-overlay">
-											<h4 class="overlay-category">Kitchen Item</h4>
-										</div>
-									</div>
-									<a href="product-album.html?title=Dish%20Towels%20Set&images=assets/images/ba-8.jpg%2Cassets/images/ba-1.jpg%2Cassets/images/ba-2.jpg%2Cassets/images/ba-3.jpg" title="Dish Towels Set" class="product-title" style="text-decoration: none !important;">Dish Towels Set</a>
-								</div>
-							</div>
+						<div class="row gallery" id="dynamic-album-container">
+							<!-- Images will be loaded here via JS -->
 						</div>
 					</div>
 				</section>
@@ -1186,6 +1097,101 @@
 		}, !1)</script>
 	<script data-no-minify="1" async src="assets/js/lazyload.min.js"></script>
 
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const urlParams = new URLSearchParams(window.location.search);
+			const title = urlParams.get('title');
+			const imagesParam = urlParams.get('images');
+			
+			if (title) {
+				document.title = title + " - Awam";
+				const heroTitle = document.querySelector('.slider_hero_title');
+				if(heroTitle) heroTitle.textContent = title;
+			}
+			
+			if (imagesParam) {
+				const images = imagesParam.split(',');
+				const container = document.getElementById('dynamic-album-container');
+				if (container) {
+					container.innerHTML = '';
+					
+					images.forEach(img => {
+						const col = document.createElement('div');
+						col.className = 'col-lg-3 col-md-4 col-xs-6 thumb';
+						
+						const gallery = document.createElement('div');
+						gallery.className = 'product-gallery';
+						
+						const imgWrapper = document.createElement('div');
+						imgWrapper.className = 'img-wrapper';
+						
+						const image = document.createElement('img');
+						image.className = 'img-fluid img-thumbnail';
+						image.src = img;
+						image.alt = title;
+						
+						const overlay = document.createElement('div');
+						overlay.className = 'hover-overlay';
+						
+						const category = document.createElement('h4');
+						category.className = 'overlay-category';
+						category.textContent = 'View Image';
+						
+						overlay.appendChild(category);
+						imgWrapper.appendChild(image);
+						imgWrapper.appendChild(overlay);
+						
+						const popupLink = document.createElement('a');
+						popupLink.href = img;
+						popupLink.title = title;
+						popupLink.className = 'product-title';
+						popupLink.style.cssText = 'text-decoration: none !important;';
+						popupLink.textContent = "Fullscreen";
+						
+						gallery.appendChild(imgWrapper);
+						
+						// the hidden links for magnific popup gallery for the other images in the album
+						images.forEach(otherImg => {
+							if(otherImg !== img) {
+								const hiddenA = document.createElement('a');
+								hiddenA.href = otherImg;
+								hiddenA.title = title;
+								hiddenA.style.display = 'none';
+								gallery.appendChild(hiddenA);
+							}
+						});
+						
+						gallery.appendChild(popupLink);
+						col.appendChild(gallery);
+						container.appendChild(col);
+					});
+					
+					setTimeout(function() {
+						$(".product-gallery").each(function () {
+							$(this).magnificPopup({
+								delegate: "a",
+								type: "image",
+								tLoading: "Loading image #%curr%...",
+								mainClass: "mfp-img-mobile",
+								gallery: {
+									enabled: true,
+									navigateByImgClick: true,
+									preload: [0, 1]
+								},
+								image: {
+									tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+									titleSrc: function (item) {
+										return item.el.attr("title");
+									}
+								}
+							});
+						});
+					}, 500);
+				}
+			}
+		});
+	</script>
 </body>
 
 
