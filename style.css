@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    Naeem Enterprise - Master Stylesheet
    Modern, Sleek, Responsive CSS Design System
    ========================================================================== */
@@ -892,8 +892,17 @@ textarea.form-control {
   /* Product carousel slides */
   .project-carousel .swiper-slide {
     width: 85vw !important;
+    height: auto !important;
   }
-  
+  .project-carousel .swiper-slide .img {
+    height: 100%;
+    display: block;
+  }
+  .project-carousel .swiper-slide .img img {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+  }
 
   /* Visit Page button always visible on mobile (no hover on touch) */
   .slide-visit-overlay {
@@ -920,9 +929,13 @@ textarea.form-control {
   .nav-container { height: 70px; }
   .logo-badge { width: 42px; height: 42px; font-size: 1.1rem; }
 
+  .project-carousel .swiper-slide .img img {
+    height: 280px !important;
+  }
   
   .visit-page-btn {
     padding: 8px 16px !important;
     font-size: 0.75rem !important;
   }
 }
+
