@@ -475,6 +475,24 @@
 					data-id="cca5f3b" data-element_type="section"
 					data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
 					style="z-index: 0; background-image: none; width: 1583px; left: 0px;">
+					
+					<script>
+						(function() {
+							const urlParams = new URLSearchParams(window.location.search);
+							const bannerParam = urlParams.get('banner');
+							if (bannerParam) {
+								const section = document.getElementById('dynamic-banner-section');
+								if (section) {
+									let parallaxData = section.getAttribute('data-awam-parallax');
+									if(parallaxData) {
+										let parsed = JSON.parse(parallaxData.replace(/&quot;/g,'"'));
+										parsed.imgsrc = bannerParam;
+										section.setAttribute('data-awam-parallax', JSON.stringify(parsed).replace(/"/g, '&quot;'));
+									}
+								}
+							}
+						})();
+					</script>
 
 					<div class="container">
 						<div class="row">
@@ -901,26 +919,6 @@
 			const urlParams = new URLSearchParams(window.location.search);
 			const title = urlParams.get('title');
 			const imagesParam = urlParams.get('images');
-			const bannerParam = urlParams.get('banner');
-			
-			if (bannerParam) {
-				const section = document.getElementById('dynamic-banner-section');
-				if (section) {
-					// Update Jarallax dynamically
-					const jarallaxDiv = section.querySelector('.jarallax-container > div');
-					if (jarallaxDiv) {
-						jarallaxDiv.style.backgroundImage = 'url("' + bannerParam + '")';
-					} else {
-						// fallback if jarallax runs later
-						let parallaxData = section.getAttribute('data-awam-parallax');
-						if(parallaxData) {
-							let parsed = JSON.parse(parallaxData.replace(/&quot;/g,'"'));
-							parsed.imgsrc = bannerParam;
-							section.setAttribute('data-awam-parallax', JSON.stringify(parsed).replace(/"/g, '&quot;'));
-						}
-					}
-				}
-			}
 			
 			if (title) {
 				document.title = title + " - Awam";
