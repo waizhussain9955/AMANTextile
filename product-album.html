@@ -485,9 +485,13 @@
 								if (section) {
 									let parallaxData = section.getAttribute('data-awam-parallax');
 									if(parallaxData) {
-										let parsed = JSON.parse(parallaxData.replace(/&quot;/g,'"'));
-										parsed.imgsrc = bannerParam;
-										section.setAttribute('data-awam-parallax', JSON.stringify(parsed).replace(/"/g, '&quot;'));
+										try {
+											let parsed = JSON.parse(parallaxData);
+											parsed.imgsrc = bannerParam;
+											section.setAttribute('data-awam-parallax', JSON.stringify(parsed));
+										} catch (e) {
+											console.error("Failed to parse parallax data", e);
+										}
 									}
 								}
 							}
