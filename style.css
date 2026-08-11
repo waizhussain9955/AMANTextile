@@ -894,10 +894,6 @@ textarea.form-control {
     width: 85vw !important;
     height: auto !important;
   }
-  .project-carousel .swiper-slide .img {
-    height: 100%;
-    display: block;
-  }
   .project-carousel .swiper-slide .img img {
     width: 100% !important;
     height: 320px !important;
