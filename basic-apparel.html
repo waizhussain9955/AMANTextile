@@ -520,22 +520,36 @@
 		}
 
 		.gallery .thumb .product-title {
-			display: inline-block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			font-family: 'Poppins', sans-serif;
-			font-size: 14px;
+			font-size: 13px;
 			font-weight: 600;
 			color: #ffffff;
-			background: #38040e;
-			padding: 8px 20px;
-			border-radius: 25px;
-			margin-top: -20px;
-			margin-bottom: 15px;
+			background: linear-gradient(135deg, #4a0513 0%, #290209 100%);
+			padding: 12px 15px;
+			border-radius: 30px;
+			margin-top: -22px;
+			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
 			position: relative;
 			z-index: 10;
-			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-			letter-spacing: 1px;
-			border: 2px solid #ffffff;
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+			letter-spacing: 1.5px;
 			text-transform: uppercase;
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			width: 85%;
+			max-width: 240px;
+			transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+		}
+
+		.gallery .thumb .product-title:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+			border-color: rgba(255, 255, 255, 0.4);
+			background: linear-gradient(135deg, #570617 0%, #38040e 100%);
 		}
 
 		/* Desktop (4 columns) */
