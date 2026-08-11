@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 
 
@@ -434,21 +434,88 @@
       .gallery .thumb {
           margin-bottom: 30px !important;
           padding: 0 10px !important;
+          text-align: center !important;
+      }
+      .gallery .thumb .img-wrapper {
+          position: relative;
+          overflow: hidden;
+          border-radius: 12px !important;
+          border: 3px solid #ffffff !important;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+          transition: box-shadow 0.4s ease !important;
       }
       .gallery .thumb img,
       .gallery img.img-thumbnail {
           width: 100% !important;
           object-fit: cover !important;
-          border-radius: 12px !important;
-          border: 3px solid #ffffff !important;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
-          transition: transform 0.4s ease, box-shadow 0.4s ease !important;
           display: block;
+          transition: transform 0.4s ease !important;
+          border: none !important; /* Move border to wrapper */
+          box-shadow: none !important;
+          border-radius: 0 !important;
       }
-      .gallery .thumb a:hover img,
-      .gallery .thumb img:hover {
-          transform: scale(1.03) !important;
+      
+      .gallery .thumb .hover-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+      }
+      
+      .gallery .thumb .view-more-btn {
+          padding: 10px 22px;
+          background-color: #D4AF37;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          border-radius: 25px;
+          transform: translateY(20px);
+          transition: all 0.4s ease;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+          text-decoration: none !important;
+      }
+      
+      .gallery .thumb .img-wrapper:hover {
           box-shadow: 0 12px 35px rgba(0,0,0,0.22) !important;
+      }
+      
+      .gallery .thumb .img-wrapper:hover img {
+          transform: scale(1.05) !important;
+      }
+      
+      .gallery .thumb .img-wrapper:hover .hover-overlay {
+          opacity: 1;
+      }
+      
+      .gallery .thumb .img-wrapper:hover .view-more-btn {
+          transform: translateY(0);
+      }
+      
+      .gallery .thumb .product-title {
+          display: inline-block;
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          color: #ffffff;
+          background: linear-gradient(135deg, #D4AF37 0%, #b58d20 100%);
+          padding: 8px 20px;
+          border-radius: 25px;
+          margin-top: -20px;
+          margin-bottom: 15px;
+          position: relative;
+          z-index: 10;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+          letter-spacing: 1px;
+          border: 2px solid #ffffff;
+          text-transform: uppercase;
       }
       
       /* Desktop (4 columns) */
@@ -653,72 +720,149 @@
 						</div>
 					</div>
 				</section>
-
-
-
-
-
-
 				
-
-				
-
 				<section class="blue-bg m-b-50 p-t-50 p-b-50">
 					<div class="container">
-					<div class="row gallery">
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-1.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-1.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
-				
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-2.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-2.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
-				
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-3.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-3.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
-				
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-4.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-4.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
+						<div class="row gallery">
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-1.jpg" title="Oven Mitts Green - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-1.jpg" alt="Oven Mitts Green">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-2.jpg" title="Oven Mitts Green - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-3.jpg" title="Oven Mitts Green - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-4.jpg" title="Oven Mitts Green - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Oven Mitts Green</div>
+							</div>
+					
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-2.jpg" title="Pot Holders - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-2.jpg" alt="Pot Holders">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-3.jpg" title="Pot Holders - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-4.jpg" title="Pot Holders - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-5.jpg" title="Pot Holders - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Pot Holders</div>
+							</div>
+					
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-3.jpg" title="Dish Towels Blue - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-3.jpg" alt="Dish Towels Blue">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-4.jpg" title="Dish Towels Blue - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-5.jpg" title="Dish Towels Blue - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-6.jpg" title="Dish Towels Blue - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Dish Towels Blue</div>
+							</div>
+					
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-4.jpg" title="Oven Mitts Set - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-4.jpg" alt="Oven Mitts Set">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-5.jpg" title="Oven Mitts Set - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-6.jpg" title="Oven Mitts Set - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-7.jpg" title="Oven Mitts Set - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Oven Mitts Set</div>
+							</div>
 
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-5.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-5.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-5.jpg" title="Pot Holders Pack - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-5.jpg" alt="Pot Holders Pack">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-6.jpg" title="Pot Holders Pack - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-7.jpg" title="Pot Holders Pack - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-8.jpg" title="Pot Holders Pack - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Pot Holders Pack</div>
+							</div>
 
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-6.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-6.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-6.jpg" title="Kitchen Towels - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-6.jpg" alt="Kitchen Towels">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-7.jpg" title="Kitchen Towels - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-8.jpg" title="Kitchen Towels - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-1.jpg" title="Kitchen Towels - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Kitchen Towels</div>
+							</div>
 
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-7.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-7.jpg" alt="Random Image"></figure>
-							</a>
-						</div>
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-7.jpg" title="Oven Mitts Red - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-7.jpg" alt="Oven Mitts Red">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-8.jpg" title="Oven Mitts Red - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-1.jpg" title="Oven Mitts Red - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-2.jpg" title="Oven Mitts Red - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Oven Mitts Red</div>
+							</div>
 
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a href="assets/images/ba-8.jpg">
-								<figure><img class="img-fluid img-thumbnail" src="assets/images/ba-8.jpg" alt="Random Image"></figure>
-							</a>
+							<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+								<div class="product-gallery">
+									<a href="assets/images/ba-8.jpg" title="Dish Towels Set - View 1">
+										<div class="img-wrapper">
+											<img class="img-fluid img-thumbnail" src="assets/images/ba-8.jpg" alt="Dish Towels Set">
+											<div class="hover-overlay">
+												<span class="view-more-btn">View More</span>
+											</div>
+										</div>
+									</a>
+									<a href="assets/images/ba-1.jpg" title="Dish Towels Set - View 2" style="display:none;"></a>
+									<a href="assets/images/ba-2.jpg" title="Dish Towels Set - View 3" style="display:none;"></a>
+									<a href="assets/images/ba-3.jpg" title="Dish Towels Set - View 4" style="display:none;"></a>
+								</div>
+								<div class="product-title">Dish Towels Set</div>
+							</div>
 						</div>
 					</div>
-				</div>
 				</section>
-
-
-
+				
 				<div class="elementor-section elementor-top-section elementor-element elementor-element-20fd7e7 nt-section m-t-100 elementor-section-boxed elementor-section-height-default elementor-section-height-default  pad-10-mobile"
 				data-id="20fd7e7" data-element_type="section"
 				data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
@@ -995,36 +1139,27 @@
 
 
 
-
-
-
-
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
-		  <script id="rendered-js" >
+	<script id="rendered-js">
 	$(document).ready(function () {
-	  $(".gallery").magnificPopup({
-		delegate: "a",
-		type: "image",
-		tLoading: "Loading image #%curr%...",
-		mainClass: "mfp-img-mobile",
-		gallery: {
-		  enabled: true,
-		  navigateByImgClick: true,
-		  preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-		  tError: '<a href="%url%">The image #%curr%</a> could not be loaded.' } });
-	
-	
+	  // Initialize a Magnific Popup gallery for each product individually
+	  $(".product-gallery").each(function() {
+		$(this).magnificPopup({
+		  delegate: "a",
+		  type: "image",
+		  tLoading: "Loading image #%curr%...",
+		  mainClass: "mfp-img-mobile",
+		  gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		  },
+		  image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.' 
+		  } 
+		});
+	  });
 	});
-	//# sourceURL=pen.js
-		</script>
-
-
-
-
-
-
+	</script>
 
 	<link data-minify="1" rel='stylesheet' id='swiper-css'
 		href="assets/css/swiper.min98d9.css"
