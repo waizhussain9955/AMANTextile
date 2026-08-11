@@ -9,7 +9,7 @@
   <!-- Monogram Mark 'A' -->
   <g transform="translate(5, 5)">
     <polygon points="20,2 2,38 12,38 16,29 28,29 32,38 42,38" fill="url(#goldGrad)" />
-    <polygon points="22,9 26,21 18,21" fill="#010a29" />
+    <polygon points="22,9 26,21 18,21" fill="#38040e" />
     <circle cx="22" cy="18" r="2.5" fill="#D4AF37" />
   </g>
 

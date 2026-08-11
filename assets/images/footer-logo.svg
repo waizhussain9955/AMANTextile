@@ -14,6 +14,6 @@
   </g>
 
   <!-- High Contrast Brand Name (Dark Navy for Light Footer) -->
-  <text x="65" y="34" font-family="'Poppins', 'Inter', sans-serif" font-weight="800" font-size="26" fill="#010a29" letter-spacing="1.5">AMAN</text>
+  <text x="65" y="34" font-family="'Poppins', 'Inter', sans-serif" font-weight="800" font-size="26" fill="#38040e" letter-spacing="1.5">AMAN</text>
   <text x="65" y="50" font-family="'Quicksand', 'Inter', sans-serif" font-weight="700" font-size="12" fill="#D4AF37" letter-spacing="5">TEXTILE</text>
 </svg>

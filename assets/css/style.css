@@ -5,10 +5,10 @@
 
 /* --- CSS Variables & Design Tokens --- */
 :root {
-  --primary-dark: #010a29;
-  --primary-blue: #056eb9;
-  --primary-navy: #112b82;
-  --primary-hover: #034b7f;
+  --primary-dark: #38040e;
+  --primary-blue: #7a1020;
+  --primary-navy: #5a0c17;
+  --primary-hover: #4a0810;
   --accent-gold: #d4af37;
   --accent-gold-hover: #b89628;
   --text-dark: #0f172a;
@@ -16,9 +16,9 @@
   --text-light: #f8fafc;
   --bg-light: #f1f5f9;
   --bg-card: #ffffff;
-  --bg-dark-card: #0a1438;
+  --bg-dark-card: #2a0508;
   --border-light: #e2e8f0;
-  --border-dark: #1e293b;
+  --border-dark: #3a0810;
   
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Quicksand', 'Inter', sans-serif;
@@ -187,7 +187,7 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(1, 10, 41, 0.92);
+  background: rgba(56, 4, 14, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition);
@@ -344,7 +344,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(1, 10, 41, 0.75) 0%, rgba(1, 10, 41, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(56, 4, 14, 0.75) 0%, rgba(56, 4, 14, 0.85) 100%);
 }
 
 .slide-content {
@@ -664,7 +664,7 @@ img {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(1, 10, 41, 0.75);
+  background: rgba(56, 4, 14, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
