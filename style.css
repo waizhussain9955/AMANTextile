@@ -892,27 +892,13 @@ textarea.form-control {
   /* Product carousel slides */
   .project-carousel .swiper-slide {
     width: 85vw !important;
-    height: auto !important;
   }
-  .project-carousel .swiper-slide .img img {
-    width: 100% !important;
-    height: 320px !important;
-    object-fit: cover !important;
-  }
+  
 
-  /* Visit Page button always visible on mobile (no hover on touch) */
+  /* Hide Visit Page hover overlay completely on mobile (looks broken on touch) */
   .slide-visit-overlay {
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    background: rgba(56, 4, 14, 0.45) !important;
+    display: none !important;
   }
-  .visit-page-btn {
-    transform: translateY(0) !important;
-    padding: 10px 22px !important;
-    font-size: 0.82rem !important;
-    letter-spacing: 1px !important;
-  }
-
   /* Stats grid */
   .grid-3, .grid-4 {
     grid-template-columns: 1fr !important;
@@ -924,14 +910,4 @@ textarea.form-control {
   .slide-title { font-size: 1.5rem !important; }
   .nav-container { height: 70px; }
   .logo-badge { width: 42px; height: 42px; font-size: 1.1rem; }
-
-  .project-carousel .swiper-slide .img img {
-    height: 280px !important;
-  }
-  
-  .visit-page-btn {
-    padding: 8px 16px !important;
-    font-size: 0.75rem !important;
-  }
 }
-

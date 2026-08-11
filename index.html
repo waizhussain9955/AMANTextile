@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 
 <head>
@@ -802,18 +802,10 @@
   box-shadow: 0 12px 35px rgba(56,4,14,0.5);
 }
 
-/* === Mobile: Show Visit Button Always (touch devices don't have hover) === */
+/* === Mobile: Hide Visit Button Always (looks broken on touch) === */
 @media (max-width: 768px) {
   .slide-visit-overlay {
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    background: rgba(56, 4, 14, 0.45) !important;
-  }
-  .visit-page-btn {
-    transform: translateY(0) !important;
-    padding: 10px 22px !important;
-    font-size: 0.8rem !important;
-    letter-spacing: 1px !important;
+    display: none !important;
   }
   
   /* Footer mobile stacking */
@@ -828,13 +820,6 @@
 }
 
 @media (max-width: 480px) {
-  .slide-visit-overlay {
-    background: rgba(56, 4, 14, 0.5) !important;
-  }
-  .visit-page-btn {
-    padding: 9px 18px !important;
-    font-size: 0.75rem !important;
-  }
   .project-carousel .swiper-slide .img img {
     height: 180px !important;
   }
