@@ -31,26 +31,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amantextile.com/manufacturing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amantextile.com/knits-woven</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amantextile.com/design</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amantextile.com/fabric</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://amantextile.com/contact-us</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
